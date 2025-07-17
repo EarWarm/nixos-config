@@ -1,13 +1,16 @@
 { config, pkgs, ... }:
 
 {
-  nix.settings.experimental-features = [ "nix-command" "flakes" ];
+  # Import configurations
+  imports = [
+    ./hardware-configuration.nix
+    ./vm-shared.nix
+  ];
 
   users.users.earwarm = {
     isNormalUser = true;
+    name = "EarWarm";
     extraGroups = [ "wheel" ];
     shell = pkgs.bash;
   };
-
-  programs.bash.enable = true;
 }

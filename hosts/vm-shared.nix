@@ -1,9 +1,10 @@
 { config, pkgs, ... }:
 
 {
+    nix.settings.experimental-features = [ "nix-command" "flakes" ];
+
     # Import configurations
     imports = [
-        ./hardware-configuration.nix
         # Import components
         ./components/datetime.nix
         ./components/fonts.nix
@@ -15,4 +16,5 @@
         ./programms/firefox.nix
     ];
 
+    programs.bash.enable = true;
 }
