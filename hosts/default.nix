@@ -3,7 +3,6 @@
 {
   # Import configurations
   imports = [
-    /etc/nixos/hardware-configuration.nix
     ./vm-shared.nix
   ];
 
