@@ -3,7 +3,7 @@
 {
   # Import configurations
   imports = [
-    ./hardware-configuration.nix
+    ../hardware-configuration.nix
     ./vm-shared.nix
   ];
 
