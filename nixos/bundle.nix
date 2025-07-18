@@ -2,8 +2,6 @@
 
 {
     imports = [
-        # Import hardware
-        ./hardware/hardware-configuration.nix
         # Import components
         ./components/datetime.nix
         ./components/fonts.nix
