@@ -10,6 +10,7 @@
         ./components/waybar.nix
         ./components/locale.nix
         ./components/nixpkgs.nix
+        ./components/networking.nix
         # Import programms
         ./programms/bundle.nix
     ];
