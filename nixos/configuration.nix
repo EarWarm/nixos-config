@@ -7,6 +7,4 @@
         ./bundle.nix
         ./users/earwarm.nix
     ];
-
-    
 }
