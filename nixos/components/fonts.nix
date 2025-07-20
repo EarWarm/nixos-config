@@ -2,9 +2,9 @@
 {
 	# Setting font (Default: JetBrains Mono)
 	fonts = {
-		enableDefaultFonts = true;
+		enableDefaultPackages = true;
 
-		fonts = with pkgs; [
+		packages = with pkgs; [
 			jetbrains-mono
 		];
 	};
