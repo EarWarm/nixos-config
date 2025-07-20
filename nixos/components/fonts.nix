@@ -7,5 +7,5 @@
 		fonts = with pkgs; [
 			jetbrains-mono
 		];
-	}
+	};
 }

@@ -11,7 +11,6 @@
         ./components/locale.nix
         ./components/nixpkgs.nix
         # Import programms
-        ./programms/git.nix
-        ./programms/firefox.nix
+        ./programms/bundle.nix
     ];
 }
