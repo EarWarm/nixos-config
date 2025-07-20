@@ -16,14 +16,14 @@
     in {
       nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
         inherit system;
-      
-        modules = [
-          (import ./nixos/configuration.nix)
-        ];
 
         specialArgs = {
           nixosPath = ./nixos;
         };
+
+        modules = [
+          ./nixos/configuration.nix
+        ];
       };
     };
 }
