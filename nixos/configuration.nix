@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ config, pkgs, nixosPath, ... }:
 {
     nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
