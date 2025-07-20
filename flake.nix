@@ -9,25 +9,20 @@
     };
   };
 
-  outputs = { self, nixpkgs, ... }: {
-    nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
-      let
-        system = "x86_64-linux";
-      in {
-        nixosConfigurations.my-host = nixpkgs.lib.nixosSystem {
-          inherit system;
+  outputs = { self, nixpkgs, ... }:
+    let
+      system = "x86_64-linux";
+    in {
+      nixosConfigurations.my-host = nixpkgs.lib.nixosSystem {
+        inherit system;
 
-          modules = [
-            # Оборачиваем путь к configuration.nix как path
-            (import ./nixos/configuration.nix)
-          ];
+        modules = [
+          (import ./nixos/configuration.nix)
+        ];
 
-          # 👇 Обязательно указываем, что ./nixos — это часть flake
-          specialArgs = {
-            nixosPath = ./nixos;
-          };
+        specialArgs = {
+          nixosPath = ./nixos;
         };
       };
     };
-  };
 }
