@@ -2,7 +2,7 @@
 {
   users.users.earwarm = {
     isNormalUser = true;
-    name = "EarWarm";
+    name = "earwarm";
     extraGroups = [
       "wheel"
       "networkmanager"
