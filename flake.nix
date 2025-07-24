@@ -26,6 +26,7 @@
         };
 
         modules = [
+          disko.nixosModules.disko
           ./disko.nix
           ./nixos/configuration.nix
         ];
