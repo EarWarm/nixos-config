@@ -7,9 +7,13 @@
       url = "github:miuirussia/yandex-browser.nix"; 
       inputs.nixpkgs.follows = "nixpkgs"; 
     };
+    disko = {
+      url = "github:nix-community/disko";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
-  outputs = { self, nixpkgs, ... }:
+  outputs = { self, nixpkgs, disko, ... }:
     let
       system = "x86_64-linux";
       pkgs = import nixpkgs { inherit system; };
@@ -22,6 +26,7 @@
         };
 
         modules = [
+          ./disko.nix
           ./nixos/configuration.nix
         ];
       };
